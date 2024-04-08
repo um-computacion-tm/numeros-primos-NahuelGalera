@@ -4,8 +4,14 @@ def is_primo(value):
     # valor % div -> resto
     if value % 2 != 0:
         return True
-    else:
-        return False
+    elif value == 2:
+        return True
+    
+    for i in range(2, value):
+        if value % i != 0:
+            return False
+
+    return False
     
 
 
